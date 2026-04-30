@@ -1,0 +1,94 @@
+/* 
+ * Global Stylesheet 
+ * Implements Tailwind CSS directives alongside custom hardware-accelerated animations 
+ * and glassmorphism UI utilities. 
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #050505;
+  color: #f8fafc;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(20, 20, 20, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .glass-hover:hover {
+    background: rgba(40, 40, 40, 0.6);
+    border: 1px solid rgba(0, 240, 255, 0.4);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+  }
+
+  /* 3D Transform Utilities for Card Flip */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
+
+/* 
+ * DOMolition Shatter Simulation 
+ * Uses a cubic-bezier timing function to create a chaotic, non-linear shake effect.
+ * Hardware acceleration is leveraged by animating only the 'transform' property, keeping composite layer repaints low.
+ */
+.shatter-fx:hover {
+  animation: shatter 0.3s cubic-bezier(.36,.07,.19,.97) infinite alternate;
+}
+
+@keyframes shatter {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  20% { transform: translate(-2px, -2px) rotate(-1deg); }
+  40% { transform: translate(-3px, 0px) rotate(1deg); }
+  60% { transform: translate(3px, 2px) rotate(0deg); }
+  80% { transform: translate(1px, -1px) rotate(1deg); }
+  100% { transform: translate(-1px, 2px) rotate(-1deg); }
+}
+
+/* 
+ * Terminal Blinker
+ * Uses a discrete step-end animation function to create a harsh boolean toggle (visible/hidden)
+ * mimicking a command-line interface cursor.
+ */
+.blinker {
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* 
+ * Data Stream Timeline
+ * Animates the background-position of a linear gradient to simulate a continuous downward data flow.
+ */
+.data-stream {
+  background: linear-gradient(to bottom, transparent 0%, #00f0ff 40%, #a855f7 60%, transparent 100%);
+  background-size: 100% 200%;
+  animation: stream-flow 3s linear infinite;
+}
+@keyframes stream-flow {
+  0% { background-position: 0% -100%; }
+  100% { background-position: 0% 100%; }
+}
