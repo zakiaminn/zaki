@@ -8,19 +8,19 @@ export default function Experience() {
   // Timeline data structure. Array of objects guarantees sequential rendering order.
   const timeline = [
     {
-      year: "Present",
-      role: "4th Year Computer Science Student",
-      detail: "Specializing in Data Analytics and Full-Stack Engineering. Building highly optimized architectures and deep-diving into statistical algorithms."
+      year: "Sept 2024 - Present",
+      role: "Computer Science Student @ Sheridan College",
+      detail: "Specializing in Data Analytics with a strong focus on data pipelines, database management, and scalable software architecture. Currently developing complex telemetry and data analytics engines."
     },
     {
-      year: "2022 - 2023",
-      role: "Software Developer Intern",
-      detail: "Developed high-throughput applications, wrote automated test suites, and streamlined data visualization pipelines."
+      year: "2022 - 2024",
+      role: "Freelance Web Developer",
+      detail: "Designed and engineered custom web applications, including professional real estate platforms. Implemented dynamic React components, modern UI micro-animations, and robust property listing logic for clients."
     },
     {
-      year: "2021",
-      role: "Freelance & Open Source",
-      detail: "Began crafting npm packages, experimenting with complex DOM manipulation, and contributing to algorithm visualizers."
+      year: "2021 - 2023",
+      role: "Undergraduate Student @ University of Calgary",
+      detail: "Completed foundational coursework in computer science, establishing strong core programming skills, algorithmic thinking, and software design principles."
     }
   ];
 
