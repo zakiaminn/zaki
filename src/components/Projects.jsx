@@ -49,53 +49,52 @@ const ProjectCard = ({ project }) => {
 
 /**
  * Projects component iterating over portfolio items.
- * Conditionally applies CSS animations based on boolean data flags within the schema.
  */
 export default function Projects() {
-  // Project data schema including metadata, tech stack array, and conditional rendering flags.
   const projects = [
     {
       title: "DOMolition",
       tagline: "Rage-Quit Shatter Engine",
-      description: "An interactive NPM package that allows users to obliterate the UI when frustration peaks. Advanced DOM manipulation disguised as pure chaos.",
-      tech: ["NPM", "JavaScript", "CSS", "DOM API"],
+      description: "An interactive NPM package that allows users to obliterate the UI when frustration peaks. Demonstrates advanced DOM manipulation, complex event handling, and CSS 3D physics disguised as pure chaos.",
+      tech: ["JavaScript", "DOM API", "CSS Physics", "NPM"],
       color: "from-red-500 to-orange-600",
       shatter: true,
       github: "https://github.com/zakiaminn/DOMolition",
       demo: "#demo-placeholder",
-      demoGif: "src/assets/DOMolitionDemo.gif" // Placeholder for your shatter gif
+      demoGif: "src/assets/DOMolitionDemo.gif" 
     },
     {
       title: "AegisGrid",
-      tagline: "Secure Data Architecture",
-      description: "A highly resilient grid system engineered for massive datasets. Delivering real-time analytical capabilities with robust enterprise-grade security.",
-      tech: ["C#", ".NET", "Data Analytics", "React"],
+      tagline: "A* Pathfinding Engine",
+      description: "A strategic grid-based application powered by the A* pathfinding algorithm. Designed to challenge users with complex environmental obstacles, it demonstrates high-level logic implementation and efficient real-time state management.",
+      tech: ["JavaScript", "Algorithms", "HTML5 Canvas", "Game Dev"],
       color: "from-cyan-400 to-blue-600",
       shatter: false,
       github: "https://github.com/zakiaminn/AegisGrid",
       demo: "#demo-placeholder",
-      demoGif: "src/assets/AegisGridDemo.gif" // Placeholder for data grid gif
+      demoGif: "src/assets/AegisGridDemo.gif" 
     },
     {
       title: "FrankenSorter",
-      tagline: "Algorithmic Visualizer",
-      description: "A stitched-together sorting visualizer that brings complex algorithmic paradigms to life, making performance metrics and efficiency visually digestible.",
-      tech: ["C++", "Java", "Algorithms"],
+      tagline: "AI-Powered Directory Manager",
+      description: "An intelligent organization system that evolved from a Python-based script into a robust local AI application. Utilizes Ollama to automate complex file routing logic, providing a streamlined GUI for high-volume tasks.",
+      tech: ["Python", "Ollama AI", "Automation", "Software Design"],
       color: "from-purple-500 to-pink-600",
       shatter: false,
       github: "https://github.com/zakiaminn/FrankenSorter",
       demo: "#demo-placeholder",
-      demoGif: "src/assets/ssdemo.png" // Placeholder for sorting algorithm gif
+      demoGif: "src/assets/ssdemo.png" 
     }
   ];
 
   return (
-    <section id="projects" className="w-full max-w-6xl px-6 py-24">
+    <section id="projects" className="w-full max-w-6xl mx-auto px-6 py-24">
       <h2 className="text-3xl md:text-4xl font-bold mb-16 flex items-center text-white">
         <span className="w-12 h-1 bg-cyan-500 mr-4 rounded"></span>
         Featured Projects
       </h2>
       
+      {/* 3-column grid for the perfect trio of projects */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {projects.map((project, idx) => (
           <ProjectCard key={idx} project={project} />
