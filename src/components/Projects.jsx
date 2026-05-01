@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import domolitionGif from '../assets/DOMolitionDemo.gif';
+import aegisGif from '../assets/AegisGridDemo.gif';
+import frankenImg from '../assets/ssdemo.png';
 
 /**
  * Encapsulated Project Card component to maintain localized flip-state per card.
@@ -61,7 +64,7 @@ export default function Projects() {
       shatter: true,
       github: "https://github.com/zakiaminn/DOMolition",
       demo: "#demo-placeholder",
-      demoGif: "src/assets/DOMolitionDemo.gif" 
+      demoGif: DOMolitionDemo.giff
     },
     {
       title: "AegisGrid",
@@ -72,7 +75,7 @@ export default function Projects() {
       shatter: false,
       github: "https://github.com/zakiaminn/AegisGrid",
       demo: "#demo-placeholder",
-      demoGif: "src/assets/AegisGridDemo.gif" 
+      demoGif: AegisGridDemo.gif
     },
     {
       title: "FrankenSorter",
@@ -83,7 +86,7 @@ export default function Projects() {
       shatter: false,
       github: "https://github.com/zakiaminn/FrankenSorter",
       demo: "#demo-placeholder",
-      demoGif: "src/assets/ssdemo.png" 
+      demoGif: ssdemo.png
     }
   ];
 
