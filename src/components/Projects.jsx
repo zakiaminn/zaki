@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import domolitionGif from '../assets/DOMolitionDemo.gif';
-import aegisGif from '../assets/AegisGridDemo.gif';
-import frankenImg from '../assets/ssdemo.png';
+
 
 /**
  * Encapsulated Project Card component to maintain localized flip-state per card.
