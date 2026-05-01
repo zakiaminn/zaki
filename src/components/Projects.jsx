@@ -64,7 +64,7 @@ export default function Projects() {
       shatter: true,
       github: "https://github.com/zakiaminn/DOMolition",
       demo: "#demo-placeholder",
-      demoGif: DOMolitionDemo.giff
+      demoGif: "/DOMolitionDemo.gif" 
     },
     {
       title: "AegisGrid",
@@ -75,7 +75,7 @@ export default function Projects() {
       shatter: false,
       github: "https://github.com/zakiaminn/AegisGrid",
       demo: "#demo-placeholder",
-      demoGif: AegisGridDemo.gif
+      demoGif: "/AegisGridDemo.gif" 
     },
     {
       title: "FrankenSorter",
@@ -86,7 +86,7 @@ export default function Projects() {
       shatter: false,
       github: "https://github.com/zakiaminn/FrankenSorter",
       demo: "#demo-placeholder",
-      demoGif: ssdemo.png
+      demoGif: "/ssdemo.png" 
     }
   ];
 
